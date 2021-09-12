@@ -14,7 +14,7 @@ def square(diameter):
 
 
 if __name__ == "__main__":
-    d = int(input("Диаметр сковородки = "))
+    d = int(input("Ди сковородки = "))
 
     print(perimeter(d))
     print(square(d))

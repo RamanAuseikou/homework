@@ -18,6 +18,7 @@ def find_entrance(f, n):
     n - номер квартиры
     """
 
+
     return 0
 
 

@@ -13,22 +13,28 @@
 
 
 def find_entrance(f, n):
-    """
-    f - число этажей в доме
-    n - номер квартиры
-    """
+    if n <= f * 4:
+        entrance = 1
+    elif n % (f * 4) == 0:
+        entrance = n // (f * 4)
+    else:
+        entrance = n // (f * 4) + 1
 
-
-    return 0
+    return entrance
 
 
 def find_floor(f, n):
-    """
-    f - число этажей в доме
-    n - номер квартиры
-    """
+    n = n % (f * 4)
+    if n <= 4 and n > 0:
+        floor = 1
+    elif n == 0:
+        floor = f
+    elif n % 4 == 0:
+        floor = n // 4
+    else:
+        floor = (n // 4) + 1
 
-    return 0
+    return floor
 
 
 if __name__ == "__main__":
@@ -37,4 +43,5 @@ if __name__ == "__main__":
 
     entrance = find_entrance(floors, flat_num)
     floor = find_floor(floors, flat_num)
-    print(entrance, floor)
+    print(str(entrance) + " подъезд", str(floor) + " этаж")
+
